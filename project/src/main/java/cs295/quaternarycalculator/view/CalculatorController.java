@@ -4,11 +4,25 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class CalculatorController {
-	@FXML
-	private Label welcomeText;
+	boolean showBaseFourValue = true;
 
 	@FXML
-	protected void onHelloButtonClick() {
-		welcomeText.setText("Welcome to JavaFX Application!");
+	private Label displayLabel;
+
+
+	@FXML
+	protected void onDisplayToggle(){
+		showBaseFourValue = !showBaseFourValue;
+		displayLabel.setText(String.valueOf(showBaseFourValue));
+	}
+
+	@FXML
+	protected void onNegativeButtonPress(){
+
+	}
+
+	@FXML
+	protected void onEqualsButtonPress(){
+
 	}
 }
