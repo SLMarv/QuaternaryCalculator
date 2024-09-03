@@ -8,8 +8,12 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-
-    <Label fx:id="displayLabel" text="Placeholder" textAlignment="RIGHT" />
+   <AnchorPane prefHeight="25.0" prefWidth="287.0">
+      <children>
+          <ToggleButton blendMode="MULTIPLY" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" onAction="#onDisplayToggle" text="Base 10" />
+          <Label fx:id="displayLabel" alignment="CENTER_RIGHT" layoutX="97.0" layoutY="4.0" prefHeight="17.0" prefWidth="203.0" text="Placeholder" textAlignment="RIGHT" />
+      </children>
+   </AnchorPane>
    <GridPane alignment="CENTER">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -29,7 +33,8 @@
           <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="+" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
           <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="=" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
           <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="(-)" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-          <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onDisplayToggle" prefHeight="600.0" prefWidth="600.0" text="4 ⇔ 10" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+          <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="x²" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+          <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="√‾" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
       </children>
    </GridPane>
 </VBox>
