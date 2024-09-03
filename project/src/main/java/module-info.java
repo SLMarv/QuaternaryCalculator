@@ -1,8 +1,8 @@
-module cs295.quaternarycalculator.view.calculatorapplication {
+module application.calculatorapplication {
 	requires javafx.controls;
 	requires javafx.fxml;
 
 
-	opens cs295.quaternarycalculator.view to javafx.fxml;
-	exports cs295.quaternarycalculator.view;
+	opens application to javafx.fxml;
+	exports application;
 }

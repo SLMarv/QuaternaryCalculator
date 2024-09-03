@@ -4,8 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cs295.QuaternaryCalculator</groupId>
-    <artifactId>view</artifactId>
+    <artifactId>application</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>CalculatorApplication</name>
 
@@ -61,7 +60,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                cs295.quaternarycalculator.view/cs295.quaternarycalculator.view.CalculatorApplication
+                                application/application.CalculatorApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
