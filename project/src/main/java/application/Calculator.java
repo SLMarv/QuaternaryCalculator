@@ -55,12 +55,14 @@ public class Calculator {
         }
     }
 
-    public int squareRootOfNumber() {
-
+    public String squareRootBaseFourNumber(String number) {
+        int result = (int) Math.sqrt(Integer.parseInt(number,4));
+        return convertBaseTenToBaseFour(result);
     }
 
-    public int squareOfNumber() {
-
+    public String squareBaseFourNumber(String baseFourNumber) {
+        int value = Integer.parseInt(baseFourNumber,4);
+        return convertBaseTenToBaseFour(value * value);
     }
 
 }
