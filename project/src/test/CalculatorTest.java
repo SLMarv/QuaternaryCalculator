@@ -25,6 +25,7 @@ public class CalculatorTest {
     @Test
     public void testSumOfNumbersBaseFour() {
         assertEquals(10, calculator.sumOfNumbers("2", "3", false));
+        assertEquals(, calculator.sumOfNumbers("", "", true));
 
     }
 
@@ -32,4 +33,36 @@ public class CalculatorTest {
     public void testSumOfNumbersBaseTen() {
 
     }
+
+    @Test
+    public void testDifferenceOfNumbersBaseFour() {
+        assertEquals( , calculator.differenceOfNumbers("", "", false));
+        assertEquals( , calculator.differenceOfNumbers("", "", true));
+    }
+    @Test
+    public void testDifferenceOfNumbersBaseTen() {
+        assertEquals( , calculator.differenceOfNumbers("", "", false));
+        assertEquals( , calculator.differenceOfNumbers("", "", true));
+    }
+    @Test
+    public void testMultiplicationOfNumbersBaseFour() {
+        assertEquals( , calculator.multiplicationOfNumbers("", "", false));
+        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+    }
+    @Test
+    public void testMultiplicationOfNumbersBaseTen() {
+        assertEquals( , calculator.multiplicationOfNumbers("", "", false));
+        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+    }
+    @Test
+    public void testDivisionnOfNumbersBaseFour() {
+        assertEquals( , calculator.divisionnOfNumbers("", "", false));
+        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+    }
+    @Test
+    public void testDivisionnOfNumbersBaseTen() {
+        assertEquals( , calculator.divisionnOfNumbers("", "", false));
+        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+    }
+
 }
