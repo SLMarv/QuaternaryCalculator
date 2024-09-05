@@ -14,12 +14,12 @@ public class CalculatorTest {
 
     @Test
     public void testConvertBaseFourToBaseTen() {
-        assertEquals(0, calculator.convertBaseFourToBaseTen("0"));
-        assertEquals(1, calculator.convertBaseFourToBaseTen("1"));
-        assertEquals(2, calculator.convertBaseFourToBaseTen("2"));
-        assertEquals(4, calculator.convertBaseFourToBaseTen("10"));
-        assertEquals(15, calculator.convertBaseFourToBaseTen("33"));
-        assertEquals(63, calculator.convertBaseFourToBaseTen("333"));
+        assertEquals(0, calculator.toDecimal("0"));
+        assertEquals(1, calculator.toDecimal("1"));
+        assertEquals(2, calculator.toDecimal("2"));
+        assertEquals(4, calculator.toDecimal("10"));
+        assertEquals(15, calculator.toDecimal("33"));
+        assertEquals(63, calculator.toDecimal("333"));
     }
 
     @Test
