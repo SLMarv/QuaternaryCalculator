@@ -28,7 +28,7 @@ public class Calculator {
             return result;
         } else {
             String result = Integer.toString(convertBaseFourToBaseTen(num1) - convertBaseFourToBaseTen(num2));
-            return result;
+            return Integer.parseInt(result);
         }
 
     }
