@@ -44,4 +44,8 @@ public class Calculator {
         return toQuaternary(value * value);
     }
 
+    public String invert(String number) {
+        int value = toDecimal(number);
+        return toQuaternary(value * -1);
+    }
 }
