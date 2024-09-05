@@ -24,9 +24,8 @@ public class CalculatorTest {
 
     @Test
     public void testSumOfNumbersBaseFour() {
-        assertEquals(10, calculator.sumOfNumbers("2", "3", false));
-        assertEquals(, calculator.sumOfNumbers("", "", true));
-
+        assertEquals("10", calculator.sumOfNumbers("2", "2"));
+        assertEquals("311", calculator.sumOfNumbers("102", "203"));
     }
 
     @Test
@@ -36,33 +35,33 @@ public class CalculatorTest {
 
     @Test
     public void testDifferenceOfNumbersBaseFour() {
-        assertEquals( , calculator.differenceOfNumbers("", "", false));
-        assertEquals( , calculator.differenceOfNumbers("", "", true));
+        assertEquals( "", calculator.differenceOfNumbers("", ""));
+        assertEquals( "", calculator.differenceOfNumbers("", ""));
     }
     @Test
     public void testDifferenceOfNumbersBaseTen() {
-        assertEquals( , calculator.differenceOfNumbers("", "", false));
-        assertEquals( , calculator.differenceOfNumbers("", "", true));
+        assertEquals( "", calculator.differenceOfNumbers("", ""));
+        assertEquals( "", calculator.differenceOfNumbers("", ""));
     }
     @Test
     public void testMultiplicationOfNumbersBaseFour() {
-        assertEquals( , calculator.multiplicationOfNumbers("", "", false));
-        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
+        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
     }
     @Test
     public void testMultiplicationOfNumbersBaseTen() {
-        assertEquals( , calculator.multiplicationOfNumbers("", "", false));
-        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
+        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
     }
     @Test
     public void testDivisionOfNumbersBaseFour() {
-        assertEquals( , calculator.divisionOfNumbers("", "", false));
-        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+        assertEquals( "", calculator.divisionOfNumbers("", ""));
+        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
     }
     @Test
     public void testDivisionOfNumbersBaseTen() {
-        assertEquals( , calculator.divisionOfNumbers("", "", false));
-        assertEquals( , calculator.multiplicationOfNumbers("", "", true));
+        assertEquals( "", calculator.divisionOfNumbers("", ""));
+        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
     }
 
 }
