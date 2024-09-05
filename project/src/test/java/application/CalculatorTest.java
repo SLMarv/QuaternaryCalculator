@@ -1,8 +1,8 @@
+package application;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
-
-import main.java.Calculator
 
 public class CalculatorTest {
     private Calculator calculator;
@@ -55,13 +55,13 @@ public class CalculatorTest {
         assertEquals( , calculator.multiplicationOfNumbers("", "", true));
     }
     @Test
-    public void testDivisionnOfNumbersBaseFour() {
-        assertEquals( , calculator.divisionnOfNumbers("", "", false));
+    public void testDivisionOfNumbersBaseFour() {
+        assertEquals( , calculator.divisionOfNumbers("", "", false));
         assertEquals( , calculator.multiplicationOfNumbers("", "", true));
     }
     @Test
-    public void testDivisionnOfNumbersBaseTen() {
-        assertEquals( , calculator.divisionnOfNumbers("", "", false));
+    public void testDivisionOfNumbersBaseTen() {
+        assertEquals( , calculator.divisionOfNumbers("", "", false));
         assertEquals( , calculator.multiplicationOfNumbers("", "", true));
     }
 
