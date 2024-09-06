@@ -57,6 +57,15 @@ public class CalculatorTest {
     }
 
     @Test
+    void divisionByZero() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> calculator.divisionOfNumbers("10", "0")
+        );
+        assertEquals("Can't divide by zero", exception.getMessage());
+    }
+
+    @Test
     void squareRootBaseFourNumber() {
         assertEquals("2", calculator.squareRootBaseFourNumber("10"));
         assertEquals("10", calculator.squareRootBaseFourNumber("100"));
