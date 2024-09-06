@@ -227,8 +227,14 @@ public class CalculatorTest {
     }
 
     @Test
-    void invert() {
-//        assertEquals("-1", calculator.invert("1"));
-//        assertEquals("-333", calculator.invert("333"));
+    void negate() {
+        calculator.concatenateToCurrentValue("3");
+        assertEquals("-3", calculator.negate());
+
+        assertEquals("3", calculator.negate());
+
+        calculator.clear();
+        calculator.concatenateToCurrentValue("0");
+        assertEquals("0", calculator.negate());
     }
 }
