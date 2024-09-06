@@ -10,11 +10,11 @@
     </padding>
    <AnchorPane prefHeight="25.0" prefWidth="287.0">
       <children>
-          <!--toggle base --> <ToggleButton blendMode="MULTIPLY" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" onAction="#onDisplayToggle" text="Base 10" />
-          <!--output --> <Label fx:id="displayLabel" alignment="CENTER_RIGHT" layoutX="97.0" layoutY="4.0" prefHeight="17.0" prefWidth="203.0" text="Placeholder" textAlignment="RIGHT" />
+          <!--toggle base --> <ToggleButton fx:id="baseToggle" blendMode="MULTIPLY" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" onAction="#onDisplayToggle" text="Base 10" />
+          <!--output --> <Label fx:id="displayLabel" alignment="CENTER_RIGHT" layoutX="97.0" layoutY="4.0" prefHeight="17.0" prefWidth="203.0" text="0" textAlignment="RIGHT" />
       </children>
    </AnchorPane>
-   <GridPane alignment="CENTER">
+   <GridPane alignment="CENTER" fx:id="gridPane">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -27,21 +27,10 @@
        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-          <!--division--> <ToggleButton fx:id="divideToggle" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="600.0" prefWidth="600.0" text="÷" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-            <toggleGroup>
-               <ToggleGroup fx:id="binaryOperators" />
-            </toggleGroup></ToggleButton>
-          <!--multiplication --> <ToggleButton contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="×" toggleGroup="$binaryOperators" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-          <!--subtraction --> <ToggleButton contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="-" toggleGroup="$binaryOperators" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-          <!--addition --> <ToggleButton contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="+" toggleGroup="$binaryOperators" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-          <!--equal sign --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="=" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-          <!--negative --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="(-)" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-          <!--squared --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="x²" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-          <!--square root --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="√" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
-          <!--0 --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-          <!--1 --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-          <!--2 --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="2" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-          <!--3 --> <Button alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-      </children>
+          <!--equal sign --> <Button onAction="#onEqualsButtonPress" alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="=" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+          <!--negative --> <Button onAction="#onNegativeButtonPress" alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="(-)" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+          <!--squared --> <Button onAction="#onSquareButtonPress" alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="x²" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+          <!--square root --> <Button onAction="#onSquareRootButtonPress" alignment="CENTER" contentDisplay="CENTER" layoutX="248.0" layoutY="43.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="600.0" text="√" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="0" />
+          </children>
    </GridPane>
 </VBox>
