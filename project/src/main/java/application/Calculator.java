@@ -38,6 +38,8 @@ public class Calculator {
 				case ADDITION -> firstOperand + secondOperand;
 				case SUBTRACTION -> firstOperand - secondOperand;
 			};
+            clear();
+            firstOperand = result;
             return toQuaternary(result);
         } catch (ArithmeticException e) {
             clear();
@@ -59,6 +61,7 @@ public class Calculator {
     }
 
     public int getCurrentDecimalValue(){
+        if (result != null) return result;
         return (binaryOperation==null? firstOperand: secondOperand);
     }
 
