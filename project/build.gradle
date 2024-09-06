@@ -17,7 +17,6 @@ ext {
     junitVersion = '5.10.2'
 }
 
-// Consider using Java 21 or 17 if Java 22 is not supported
 sourceCompatibility = '22'
 targetCompatibility = '22'
 
@@ -36,6 +35,7 @@ javafx {
 }
 
 dependencies {
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
