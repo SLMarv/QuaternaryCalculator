@@ -57,7 +57,8 @@ public class CalculatorController {
 	@FXML
 	protected void onEqualsButtonPress(){
 		try {
-			displayLabel.setText(calculator.calculate());
+			calculator.calculate();
+			updateDisplay();
 		} catch (ArithmeticException e) {
 			displayLabel.setText("Undefined: press clear to reset");
 			gridPane.setDisable(true);
