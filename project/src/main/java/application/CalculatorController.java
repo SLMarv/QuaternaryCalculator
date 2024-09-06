@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 
 public class CalculatorController {
+	public Button clearButton;
 	Calculator calculator = new Calculator();
 
 
@@ -58,7 +59,9 @@ public class CalculatorController {
 		try {
 			displayLabel.setText(calculator.calculate());
 		} catch (ArithmeticException e) {
-			displayLabel.setText("Undefined: press numeric to reset");
+			displayLabel.setText("Undefined: press clear to reset");
+			gridPane.setDisable(true);
+			baseToggle.setDisable(true);
 		}
 	}
 
@@ -76,5 +79,12 @@ public class CalculatorController {
 
 	private void updateDisplay(){
 		displayLabel.setText(baseToggle.isSelected()? String.valueOf(calculator.getCurrentDecimalValue()) : calculator.getCurrentQuaternaryValue());
+	}
+
+	public void onClearButtonPress() {
+		calculator.clear();
+		gridPane.setDisable(false);
+		baseToggle.setDisable(false);
+		updateDisplay();
 	}
 }
