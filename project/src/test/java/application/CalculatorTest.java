@@ -13,7 +13,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testConvertBaseFourToBaseTen() {
+    void toDecimal() {
         assertEquals(0, calculator.toDecimal("0"));
         assertEquals(1, calculator.toDecimal("1"));
         assertEquals(2, calculator.toDecimal("2"));
@@ -23,45 +23,54 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testSumOfNumbersBaseFour() {
+    void toQuaternary() {
+        assertEquals("0", calculator.toQuaternary(0));
+        assertEquals("1", calculator.toQuaternary(1));
+        assertEquals("2", calculator.toQuaternary(2));
+        assertEquals("10", calculator.toQuaternary(4));
+        assertEquals("33", calculator.toQuaternary(15));
+        assertEquals("333", calculator.toQuaternary(63));
+    }
+
+    @Test
+    void sumOfNumbers() {
         assertEquals("10", calculator.sumOfNumbers("2", "2"));
         assertEquals("311", calculator.sumOfNumbers("102", "203"));
     }
 
     @Test
-    public void testSumOfNumbersBaseTen() {
-
+    void differenceOfNumbers() {
+        assertEquals( "2", calculator.differenceOfNumbers("3", "1"));
+        assertEquals( "3", calculator.differenceOfNumbers("10", "1"));
     }
 
     @Test
-    public void testDifferenceOfNumbersBaseFour() {
-        assertEquals( "", calculator.differenceOfNumbers("", ""));
-        assertEquals( "", calculator.differenceOfNumbers("", ""));
-    }
-    @Test
-    public void testDifferenceOfNumbersBaseTen() {
-        assertEquals( "", calculator.differenceOfNumbers("", ""));
-        assertEquals( "", calculator.differenceOfNumbers("", ""));
-    }
-    @Test
-    public void testMultiplicationOfNumbersBaseFour() {
-        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
-        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
-    }
-    @Test
-    public void testMultiplicationOfNumbersBaseTen() {
-        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
-        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
-    }
-    @Test
-    public void testDivisionOfNumbersBaseFour() {
-        assertEquals( "", calculator.divisionOfNumbers("", ""));
-        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
-    }
-    @Test
-    public void testDivisionOfNumbersBaseTen() {
-        assertEquals( "", calculator.divisionOfNumbers("", ""));
-        assertEquals( "", calculator.multiplicationOfNumbers("", ""));
+    void multiplicationOfNumbers() {
+        assertEquals( "1", calculator.multiplicationOfNumbers("1", "1"));
+        assertEquals( "30", calculator.multiplicationOfNumbers("10", "3"));
     }
 
+    @Test
+    void divisionOfNumbers() {
+        assertEquals( "2", calculator.divisionOfNumbers("10", "2"));
+        assertEquals( "10", calculator.divisionOfNumbers("30", "3"));
+    }
+
+    @Test
+    void squareRootBaseFourNumber() {
+        assertEquals("2", calculator.squareRootBaseFourNumber("10"));
+        assertEquals("10", calculator.squareRootBaseFourNumber("100"));
+    }
+
+    @Test
+    void squareBaseFourNumber() {
+        assertEquals( "10", calculator.squareBaseFourNumber("2"));
+        assertEquals( "21", calculator.squareBaseFourNumber("3"));
+    }
+
+    @Test
+    void invert() {
+        assertEquals("-1", calculator.invert("1"));
+        assertEquals("-333", calculator.invert("333"));
+    }
 }
