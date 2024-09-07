@@ -19,7 +19,7 @@ To run this project, you will need the following dependencies:
 
 ## Installation 
 To run this project: 
-1. Clone the repository local machine on your IDE: https://github.com/SLMarv/QuaternaryCalculator.git 
+1. Clone the repository on your IDE: https://github.com/SLMarv/QuaternaryCalculator.git 
 2. Edit run configurations 
 - In the gradle project section, make sure to select the project folder inside of QuaternaryCalculator. 
 - Put in Project for the name section 
