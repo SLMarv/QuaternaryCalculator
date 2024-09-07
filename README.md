@@ -40,7 +40,7 @@ In case of any issues encountered
 - Verify correct JDK and JavaFX versions 
 
 ## Contributors 
-Contributors and their contributions to this applicationa include:
+Contributors and their contributions to this application include:
 - Cyrus Cox = arithmetic operations for calculator logic, project file structuring, documentation
 - Samuel Marvin = user interface, calculator logic, unit testing, functionality fixes, documentation
 - Kevin Yu = skeleton for calculator logic, unit tests, functionality fixes, documentation
