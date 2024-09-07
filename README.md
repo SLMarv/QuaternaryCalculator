@@ -42,8 +42,8 @@ In case of any issues encountered
 ## Contributors 
 Contributors and their contributions to this applicationa include:
 - Cyrus Cox = arithmetic operations for calculator logic, project file structuring, documentation
-- Samuel Marvin = user interface, calculator logic, calculator logic, documentation
-- Kevin Yu = skeleton for calculator logic, calculator logic, unit tests, documentation
+- Samuel Marvin = user interface, calculator logic, unit testing, functionality fixes, documentation
+- Kevin Yu = skeleton for calculator logic, unit tests, functionality fixes, documentation
 - Angeles Marin Batana = arithmetic operations for calculator logic, unit tests, documentation 
 
 Note: The project files needed to be restructured, so some contributor’s original commits were lost. 
