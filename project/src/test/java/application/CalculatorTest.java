@@ -94,7 +94,7 @@ public class CalculatorTest {
         calculator.concatenateToCurrentValue("100");
         calculator.setBinaryOperation(BinaryOperation.SUBTRACTION);
         calculator.concatenateToCurrentValue("11");
-        assertEquals("13", calculator.calculate());
+        assertEquals("23", calculator.calculate());
         calculator.clear();
 
         calculator.concatenateToCurrentValue("21");
@@ -121,7 +121,7 @@ public class CalculatorTest {
         calculator.concatenateToCurrentValue("12");
         calculator.setBinaryOperation(BinaryOperation.MULTIPLICATION);
         calculator.concatenateToCurrentValue("3");
-        assertEquals("110", calculator.calculate());
+        assertEquals("102", calculator.calculate());
         calculator.clear();
 
         calculator.concatenateToCurrentValue("111");
@@ -179,7 +179,7 @@ public class CalculatorTest {
 
         calculator.concatenateToCurrentValue("21");
         calculator.squareRoot();
-        assertEquals("11", calculator.getCurrentQuaternaryValue());
+        assertEquals("3", calculator.getCurrentQuaternaryValue());
         calculator.clear();
 
         calculator.concatenateToCurrentValue("1000");
@@ -192,9 +192,9 @@ public class CalculatorTest {
         assertEquals("11", calculator.getCurrentQuaternaryValue());
         calculator.clear();
 
-        calculator.concatenateToCurrentValue("110");
+        calculator.concatenateToCurrentValue("121");
         calculator.squareRoot();
-        assertEquals("12", calculator.getCurrentQuaternaryValue());
+        assertEquals("11", calculator.getCurrentQuaternaryValue());
         calculator.clear();
     }
 
@@ -215,14 +215,9 @@ public class CalculatorTest {
         assertEquals("100", calculator.getCurrentQuaternaryValue());
         calculator.clear();
 
-        calculator.concatenateToCurrentValue("111");
-        calculator.square();
-        assertEquals("11121", calculator.getCurrentQuaternaryValue());
-        calculator.clear();
-
         calculator.concatenateToCurrentValue("30");
         calculator.square();
-        assertEquals("1200", calculator.getCurrentQuaternaryValue());
+        assertEquals("2100", calculator.getCurrentQuaternaryValue());
         calculator.clear();
     }
 

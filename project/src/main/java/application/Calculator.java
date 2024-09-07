@@ -10,7 +10,6 @@ public class Calculator {
 
     public void concatenateToCurrentValue(String baseFourValue){
         if (result != null) {
-            result = null;
             clear();
         }
         try{
@@ -19,6 +18,11 @@ public class Calculator {
     }
 
     public void clear(){
+        result = null;
+        reset();
+    }
+
+    private void reset(){
         firstOperand = 0;
         secondOperand = 0;
         binaryOperation = null;
@@ -38,11 +42,10 @@ public class Calculator {
 				case ADDITION -> firstOperand + secondOperand;
 				case SUBTRACTION -> firstOperand - secondOperand;
 			};
-            clear();
-            firstOperand = result;
+            reset();
             return toQuaternary(result);
         } catch (ArithmeticException e) {
-            clear();
+            reset();
             throw e;
         }
     }
