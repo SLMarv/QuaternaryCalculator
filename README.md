@@ -1,13 +1,13 @@
-# Quaternary Calulator 
+# Quaternary Calculator 
 # Team 1 
 
-This is a simple calculator program that performs operations on quaternary numbers, which are base- 4. This application features an intuitive user interface that allows users to perform operations:
+This is a simple calculator program that performs operations on quaternary numbers, which are base-4. This application features an intuitive user interface that allows users to perform operations:
 - Addition 
 - Subtraction 
 - Multiplication 
 - Division 
 
-Along single- number operations using quaternary numbers: 
+Alongside single-number operations using quaternary numbers: 
 - Square 
 - Square- root 
 
@@ -20,16 +20,17 @@ To run this project, you will need the following dependencies:
 ## Installation 
 To run this project: 
 1. Clone the repository local machine on your IDE: https://github.com/SLMarv/QuaternaryCalculator.git 
-2. Edit run configurations 
+2. Edit run configurations (Select *Current File* Drop-down menu and select *Edit Configuration)
+<img src="project/images/current-file.png" alt="edit-config">
 - In the gradle project section, make sure to select the project folder inside of QuaternaryCalculator. 
 - Put in Project for the name section 
 - Type run in the section label Run In the gradle project section, make sure to select the project folder inside of QuaternaryCalculator
 - Hit apply 
-
+<img src="project/images/gradle-run.png" alt="gradle-settings">
 This will ensure the project builds and is prepared to run correctly. 
 
 3. Run the application 
-- Run the application by selecting the ‘run’ option from you IDE
+- Run the application by selecting the ‘run’ option from your IDE
 
 ## How to Use the Calculator  
 Once the application is running, you can use the application to perform calculations in the quaternary numeral system. You are able to select from 4 numbers (​​0, 1, 2, 3) and select the operation you want to run and application will display the result of the operation.
@@ -40,9 +41,9 @@ In case of any issues encountered
 - Verify correct JDK and JavaFX versions 
 
 ## Contributors 
-Contributors and their contributions to this applicationa include:
-- Cyrus Cox = arithmetic operations for calculator logic, project file structuring, documentation
-- Samuel Marvin = user interface, calculator logic, calculator logic, documentation
+Contributors and their contributions to this application include:
+- Cyrus Cox = arithmetic operations for calculator logic, unit tests, project file structuring, documentation
+- Samuel Marvin = user interface, calculator logic, documentation
 - Kevin Yu = skeleton for calculator logic, calculator logic, unit tests, documentation
 - Angeles Marin Batana = arithmetic operations for calculator logic, unit tests, documentation 
 
@@ -74,4 +75,8 @@ Meet 4
 - Who attended: Sam, Kevin, Angeles
 - What was discussed: Running code, running tests, discussing project requirements, making readme file
 
+## Screenshots of Examples
 
+<img src="project/images/screenshot1.png" alt="Ex 1">
+<img src="project/images/screenshot2.png" alt="Ex 2">
+<img src="project/images/screenshot3.png" alt="Ex 3">
